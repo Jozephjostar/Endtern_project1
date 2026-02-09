@@ -5,8 +5,6 @@ This system provides CRUD operations for users, artists, albums, tracks, playlis
 
 The project is connected to a PostgreSQL database and uses Spring Data JPA (Hibernate) for database operations.
 
-⸻
-
 Project Features
 
 With this API you can:
@@ -20,8 +18,6 @@ With this API you can:
 	•	Manage subscription plans (subscription_plans)
 	•	Manage user subscriptions (subscriptions)
 
-⸻
-
 Technologies
 	•	Java 17 / OpenJDK 25
 	•	Spring Boot 4.0
@@ -31,8 +27,6 @@ Technologies
 	•	PostgreSQL
 	•	Maven
 	•	Postman (API testing)
-
-⸻
 
 Project Structure
 
@@ -49,8 +43,6 @@ src/main/java/com/example/endtern_project1/
 └── Application.java # Main Spring Boot Application
 
 
-⸻
-
 Database Schema
 
 The project uses PostgreSQL and includes the following tables:
@@ -64,7 +56,6 @@ The project uses PostgreSQL and includes the following tables:
 	•	subscription_plans
 	•	subscriptions
 
-⸻
 
 Database Relationships
 	•	One user → many playlists
@@ -74,7 +65,6 @@ Database Relationships
 	•	One user → subscriptions
 	•	Subscription → subscription plan
 
-⸻
 
 How to Run the Project
 
@@ -84,14 +74,12 @@ git clone https://github.com/<your-username>/Endtern_project1.git
 cd Endtern_project1
 
 
-⸻
 
 2. Create PostgreSQL database
 
 CREATE DATABASE music_platform;
 
 
-⸻
 
 3. Configure application.properties
 
@@ -111,7 +99,6 @@ spring.jpa.show-sql=true
 server.port=8080
 
 
-⸻
 
 4. Run the application
 
@@ -121,7 +108,6 @@ or use Maven:
 mvn spring-boot:run
 
 
-⸻
 
 API Testing
 
@@ -134,7 +120,6 @@ You can test the API using:
 	•	curl
 	•	Browser (GET requests)
 
-⸻
 
 REST API Endpoints
 
@@ -148,7 +133,6 @@ PUT	/users/{id}	Update user
 DELETE	/users/{id}	Delete user
 
 
-⸻
 
 Artists
 
@@ -160,7 +144,6 @@ PUT	/artists/{id}	Update artist
 DELETE	/artists/{id}	Delete artist
 
 
-⸻
 
 Albums
 
@@ -172,7 +155,6 @@ PUT	/albums/{id}	Update album
 DELETE	/albums/{id}	Delete album
 
 
-⸻
 
 Tracks
 
@@ -184,7 +166,6 @@ PUT	/tracks/{id}	Update track
 DELETE	/tracks/{id}	Delete track
 
 
-⸻
 
 Playlists
 
@@ -196,7 +177,6 @@ PUT	/playlists/{id}	Update playlist
 DELETE	/playlists/{id}	Delete playlist
 
 
-⸻
 
 Playlist Tracks
 
@@ -205,7 +185,6 @@ POST	/playlists/{playlistId}/tracks/{trackId}	Add track to playlist
 DELETE	/playlists/{playlistId}/tracks/{trackId}	Remove track from playlist
 
 
-⸻
 
 Subscription Plans
 
@@ -214,7 +193,6 @@ GET	/plans	Get all subscription plans
 POST	/plans	Create subscription plan
 
 
-⸻
 
 Subscriptions
 
@@ -223,7 +201,6 @@ GET	/subscriptions	Get all subscriptions
 POST	/subscriptions	Create subscription
 
 
-⸻
 
 JSON Request Examples
 
@@ -237,7 +214,6 @@ POST /artists
 }
 
 
-⸻
 
 Create Album
 
@@ -250,7 +226,6 @@ POST /albums
 }
 
 
-⸻
 
 Create Track
 
@@ -265,7 +240,6 @@ POST /tracks
 }
 
 
-⸻
 
 Design Patterns Implementation
 
@@ -278,14 +252,12 @@ Used for:
 
 Singleton ensures that only one instance of a class exists in the application.
 
-⸻
 
 Factory Pattern
 
 Used to create objects from an abstract base type.
 Factory makes the project easier to extend and reduces dependencies on concrete classes.
 
-⸻
 
 Builder Pattern
 
@@ -294,7 +266,6 @@ Builder supports fluent method chaining and improves readability.
 
 Example usage: building Track, Album, Subscription objects.
 
-⸻
 
 Component Principles
 
@@ -308,19 +279,16 @@ Reusable modules are separated into packages:
 	•	patterns
 	•	utils
 
-⸻
 
 CCP (Common Closure Principle)
 
 Classes that change together are grouped together.
 
-⸻
 
 CRP (Common Reuse Principle)
 
 Packages are structured so that modules do not depend on unused classes.
 
-⸻
 
 SOLID Principles
 
@@ -331,7 +299,6 @@ SOLID principles are applied in the architecture:
 	•	I: interfaces are separated by responsibility
 	•	D: Spring Dependency Injection is used to reduce coupling
 
-⸻
 
 Error Handling
 
@@ -350,7 +317,6 @@ Example error response:
 }
 
 
-⸻
 
 Documentation & UML
 
@@ -359,7 +325,6 @@ The docs/ folder contains:
 	•	Postman screenshots
 	•	Architecture diagram
 
-⸻
 
 What I Learned
 	•	Building REST API with Spring Boot
@@ -371,7 +336,6 @@ What I Learned
 	•	Applying SOLID principles
 	•	Organizing project structure professionally
 
-⸻
 
 Author
 
